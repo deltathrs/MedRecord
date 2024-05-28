@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:med_record/authentication/presentation/screens/profile.dart';
-import 'package:med_record/doctor/presentation/screens/doctor.dart';
-import 'package:med_record/features/dashboard/presentation/pages/dashboard/dashboard.dart';
-import 'package:med_record/record/presentation/screens/record.dart';
+import 'package:med_record/features/authentication/presentation/screens/profile.dart';
+import 'package:med_record/features/dashboard/presentation/screens/dashboard.dart';
+import 'package:med_record/features/doctor/presentation/screens/doctor.dart';
+import 'package:med_record/features/record/presentation/screens/record.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,7 +23,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      body: IndexedStack(children: widgetList,index: index,),
+      body: IndexedStack(
+        children: widgetList,
+        index: index,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           // Home
