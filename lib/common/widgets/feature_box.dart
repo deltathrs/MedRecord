@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 
-FeaturesIcon(String title, Color border, String icon) {
+Widget FeaturesIcon(String title, Color border, String icon) {
   return Column(children: [
     Container(
       width: 60,

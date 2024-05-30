@@ -11,7 +11,9 @@ class _DoctorScreenState extends State<DoctorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('Doctor Screen'),),
+      body: Center(
+        child: Text('Doctor Screen'),
+      ),
     );
   }
 }

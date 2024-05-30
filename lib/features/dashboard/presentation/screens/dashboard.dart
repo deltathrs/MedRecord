@@ -43,6 +43,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
     "assets/img/dashboard/offer3.png"
   ];
 
+  String heartRate =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="white" d="M12 4.339c2.072-1.686 4.534-1.68 6.494-.538c2.095 1.221 3.569 3.7 3.504 6.592c-.079 3.52-2.752 6.634-7.323 9.424l-.356.214c-.331.198-.662.398-1.007.573c-.405.206-.85.396-1.312.396c-.463 0-.907-.19-1.313-.396c-.23-.117-.453-.244-.674-.375l-.332-.198c-4.788-2.844-7.598-6.029-7.679-9.638c-.065-2.892 1.409-5.37 3.504-6.592C7.466 2.66 9.928 2.653 12 4.34Zm-2.07 6.037l-1.036 2.071A1 1 0 0 1 8 13H4.776c.925 1.646 2.713 3.348 5.55 5.085l.376.227c.294.175.586.354.891.509c.13.066.265.134.407.173c.142-.04.276-.107.407-.173c.203-.103.4-.218.597-.334l.294-.175c3.056-1.816 4.961-3.594 5.926-5.312h-3.689l-1.703 2.555a1 1 0 0 1-1.751-.16l-2.15-5.02Zm7.557-4.846c-1.394-.812-3.136-.784-4.644.742a1.188 1.188 0 0 1-1.686 0C9.65 4.746 7.907 4.718 6.513 5.53c-1.444.841-2.56 2.628-2.511 4.818c.003.144.012.29.028.434l.03.218h3.322l1.724-3.447a1 1 0 0 1 1.755-.061l.058.114l2.273 5.304l.976-1.465a1 1 0 0 1 .708-.437L15 11h4.94a4.98 4.98 0 0 0 .058-.652c.05-2.19-1.067-3.977-2.511-4.818"/></g></svg>';
+
+  String footSteps =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M130.54 358.31c-12.83 1.88-33.95 5.38-48-10.56S56.34 293.32 51 258.92c-7.88-50.7-.06-93.43 22-120.31c13-15.83 30.06-25 49.34-26.46c16.51-1.27 41.18 5.19 65 43.19c14.92 23.81 26.27 55.44 31.14 86.77c5.88 37.82 11.61 78.18-8.44 92.65c-11.31 8.17-19.43 11-38.62 15.57c-15.78 3.75-28.04 6.09-40.88 7.98m-22.82 32.53l108.89-22.46c9.2-1.9 16.58 3.16 20 18.32c11.22 49.76-4.86 109.3-55.22 109.3c-47.69 0-79.47-54.36-84.66-83.58c-2.37-13.25 1.01-19.53 10.99-21.58m232.87-136.5c-19.19-4.55-27.31-7.4-38.62-15.57c-20.05-14.47-14.32-54.83-8.44-92.65c4.87-31.33 16.22-63 31.14-86.77c23.8-38 48.47-44.46 65-43.19C408.93 17.63 426 26.78 439 42.61c22.08 26.88 29.9 69.61 22 120.31c-5.35 34.4-17.46 72.76-31.59 88.83s-35.13 12.44-48 10.56s-25.05-4.23-40.82-7.97m63.69 40.5l-108.89-22.46c-9.2-1.9-16.58 3.16-20 18.32c-11.21 49.76 4.87 109.3 55.23 109.3c47.69 0 79.47-54.36 84.66-83.58c2.36-13.25-1.02-19.53-11-21.58"/></svg>';
+
+  String familyRecord =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48"><g fill="none" stroke="white" stroke-linecap="round" stroke-width="4"><path d="M10 19s-5.143 2-6 9m34-9s5.143 2 6 9m-26-9s4.8 1.167 6 7m6-7s-4.8 1.167-6 7m-4 8s-4.2.75-6 6m14-6s4.2.75 6 6"/><circle cx="24" cy="31" r="5" stroke-linejoin="round"/><circle cx="34" cy="14" r="6" stroke-linejoin="round"/><circle cx="14" cy="14" r="6" stroke-linejoin="round"/></g></svg>';
+
+  String bodyTemp =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M448 96a32 32 0 1 0-64 0a32 32 0 1 0 64 0m-128 0a96 96 0 1 1 192 0a96 96 0 1 1-192 0M144 64c-26.5 0-48 21.5-48 48v164.5c0 17.3-7.1 31.9-15.3 42.5C70.2 332.6 64 349.5 64 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48M32 112C32 50.2 82.1 0 144 0s112 50.1 112 112v164.5c0 .1.1.3.2.6c.2.6.8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S0 447.5 0 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3.2-.5.2-.6zm160 256c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V272c0-8.8 7.2-16 16-16s16 7.2 16 16v50.7c18.6 6.6 32 24.4 32 45.3"/></svg>';
+
+  String sleepOverview =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22C6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981"/></svg>';
+
+  String waterIntake =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M265.12 60.12a12 12 0 0 0-18.23 0C215.23 97.15 112 225.17 112 320c0 88.37 55.64 144 144 144s144-55.63 144-144c0-94.83-103.23-222.85-134.88-259.88M272 412a12 12 0 0 1-11.34-16a11.89 11.89 0 0 1 11.41-8A60.06 60.06 0 0 0 332 328.07a11.89 11.89 0 0 1 8-11.41A12 12 0 0 1 356 328a84.09 84.09 0 0 1-84 84"/></svg>';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -154,28 +172,32 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        FeaturesIcon('Heart Rate', Color(0xFF67BFFF),
-                            '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="white" d="M12 4.339c2.072-1.686 4.534-1.68 6.494-.538c2.095 1.221 3.569 3.7 3.504 6.592c-.079 3.52-2.752 6.634-7.323 9.424l-.356.214c-.331.198-.662.398-1.007.573c-.405.206-.85.396-1.312.396c-.463 0-.907-.19-1.313-.396c-.23-.117-.453-.244-.674-.375l-.332-.198c-4.788-2.844-7.598-6.029-7.679-9.638c-.065-2.892 1.409-5.37 3.504-6.592C7.466 2.66 9.928 2.653 12 4.34Zm-2.07 6.037l-1.036 2.071A1 1 0 0 1 8 13H4.776c.925 1.646 2.713 3.348 5.55 5.085l.376.227c.294.175.586.354.891.509c.13.066.265.134.407.173c.142-.04.276-.107.407-.173c.203-.103.4-.218.597-.334l.294-.175c3.056-1.816 4.961-3.594 5.926-5.312h-3.689l-1.703 2.555a1 1 0 0 1-1.751-.16l-2.15-5.02Zm7.557-4.846c-1.394-.812-3.136-.784-4.644.742a1.188 1.188 0 0 1-1.686 0C9.65 4.746 7.907 4.718 6.513 5.53c-1.444.841-2.56 2.628-2.511 4.818c.003.144.012.29.028.434l.03.218h3.322l1.724-3.447a1 1 0 0 1 1.755-.061l.058.114l2.273 5.304l.976-1.465a1 1 0 0 1 .708-.437L15 11h4.94a4.98 4.98 0 0 0 .058-.652c.05-2.19-1.067-3.977-2.511-4.818"/></g></svg>'),
+                        FeaturesIcon(
+                            'Heart Rate', Color(0xFF67BFFF), heartRate),
                         SizedBox(
                           width: 12,
                         ),
-                        FeaturesIcon('Foot Steps', Color(0xFF67BFFF),
-                            '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M130.54 358.31c-12.83 1.88-33.95 5.38-48-10.56S56.34 293.32 51 258.92c-7.88-50.7-.06-93.43 22-120.31c13-15.83 30.06-25 49.34-26.46c16.51-1.27 41.18 5.19 65 43.19c14.92 23.81 26.27 55.44 31.14 86.77c5.88 37.82 11.61 78.18-8.44 92.65c-11.31 8.17-19.43 11-38.62 15.57c-15.78 3.75-28.04 6.09-40.88 7.98m-22.82 32.53l108.89-22.46c9.2-1.9 16.58 3.16 20 18.32c11.22 49.76-4.86 109.3-55.22 109.3c-47.69 0-79.47-54.36-84.66-83.58c-2.37-13.25 1.01-19.53 10.99-21.58m232.87-136.5c-19.19-4.55-27.31-7.4-38.62-15.57c-20.05-14.47-14.32-54.83-8.44-92.65c4.87-31.33 16.22-63 31.14-86.77c23.8-38 48.47-44.46 65-43.19C408.93 17.63 426 26.78 439 42.61c22.08 26.88 29.9 69.61 22 120.31c-5.35 34.4-17.46 72.76-31.59 88.83s-35.13 12.44-48 10.56s-25.05-4.23-40.82-7.97m63.69 40.5l-108.89-22.46c-9.2-1.9-16.58 3.16-20 18.32c-11.21 49.76 4.87 109.3 55.23 109.3c47.69 0 79.47-54.36 84.66-83.58c2.36-13.25-1.02-19.53-11-21.58"/></svg>'),
+                        FeaturesIcon(
+                            'Foot Steps', Color(0xFF67BFFF), footSteps),
                         SizedBox(
                           width: 12,
                         ),
-                        FeaturesIcon('Family Record', Color(0xFF67BFFF),
-                            '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48"><g fill="none" stroke="white" stroke-linecap="round" stroke-width="4"><path d="M10 19s-5.143 2-6 9m34-9s5.143 2 6 9m-26-9s4.8 1.167 6 7m6-7s-4.8 1.167-6 7m-4 8s-4.2.75-6 6m14-6s4.2.75 6 6"/><circle cx="24" cy="31" r="5" stroke-linejoin="round"/><circle cx="34" cy="14" r="6" stroke-linejoin="round"/><circle cx="14" cy="14" r="6" stroke-linejoin="round"/></g></svg>'),
+                        FeaturesIcon(
+                            'Family Record', Color(0xFF67BFFF), familyRecord),
                         SizedBox(
                           width: 12,
                         ),
-                        FeaturesIcon('Body Temp', Color(0xFF67BFFF),
-                            '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M448 96a32 32 0 1 0-64 0a32 32 0 1 0 64 0m-128 0a96 96 0 1 1 192 0a96 96 0 1 1-192 0M144 64c-26.5 0-48 21.5-48 48v164.5c0 17.3-7.1 31.9-15.3 42.5C70.2 332.6 64 349.5 64 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48M32 112C32 50.2 82.1 0 144 0s112 50.1 112 112v164.5c0 .1.1.3.2.6c.2.6.8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S0 447.5 0 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3.2-.5.2-.6zm160 256c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V272c0-8.8 7.2-16 16-16s16 7.2 16 16v50.7c18.6 6.6 32 24.4 32 45.3"/></svg>'),
+                        FeaturesIcon('Body Temp', Color(0xFF67BFFF), bodyTemp),
                         SizedBox(
                           width: 12,
                         ),
-                        FeaturesIcon('Others', Colors.white,
-                            '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><g fill="#67BFFF"><path d="M152 128a24 24 0 1 1-24-24a24 24 0 0 1 24 24M48 104a24 24 0 1 0 24 24a24 24 0 0 0-24-24m160 0a24 24 0 1 0 24 24a24 24 0 0 0-24-24" opacity="0.2"/><path d="M128 96a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16M48 96a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16m160-48a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16"/></g></svg>')
+                        GestureDetector(
+                          onTap: () {
+                            _displayBottomSheet(context);
+                          },
+                          child: FeaturesIcon('Others', Colors.white,
+                              '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><g fill="#67BFFF"><path d="M152 128a24 24 0 1 1-24-24a24 24 0 0 1 24 24M48 104a24 24 0 1 0 24 24a24 24 0 0 0-24-24m160 0a24 24 0 1 0 24 24a24 24 0 0 0-24-24" opacity="0.2"/><path d="M128 96a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16M48 96a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16m160-48a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16"/></g></svg>'),
+                        )
                       ],
                     ),
                   ],
@@ -210,7 +232,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         itemWidth: 282,
                         viewportFraction: 0.8,
                         scale: 0.9,
-                        loop: false,
+                        loop: true,
+                        autoplay: true,
                       ),
                     )
                   ]),
@@ -221,5 +244,98 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ),
       ),
     );
+  }
+
+  Future _displayBottomSheet(BuildContext context) {
+    return showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return ClipRRect(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+            child: Stack(
+              children: [
+                Container(
+                  height: 350,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(30)),
+                  ),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(top: 12, left: 15, right: 15),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                            child: Container(
+                          width: 75,
+                          height: 5,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Color(0xFF5A5A5A)),
+                        )),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Center(
+                          child: Text(
+                            'MedRecord Features',
+                            style: GoogleFonts.leagueSpartan(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xFF5A5A5A)),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            FeaturesIcon(
+                                'Heart Rate', Color(0xFF67BFFF), heartRate),
+                            SizedBox(
+                              width: 12,
+                            ),
+                            FeaturesIcon(
+                                'Foot Steps', Color(0xFF67BFFF), footSteps),
+                            SizedBox(
+                              width: 12,
+                            ),
+                            FeaturesIcon('Family Record', Color(0xFF67BFFF),
+                                familyRecord),
+                            SizedBox(
+                              width: 12,
+                            ),
+                            FeaturesIcon(
+                                'Body Temp', Color(0xFF67BFFF), bodyTemp),
+                            SizedBox(
+                              width: 12,
+                            ),
+                            FeaturesIcon('Sleep Overview', Color(0xFF67BFFF),
+                                sleepOverview),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            FeaturesIcon(
+                                'Water Intake', Color(0xFF67BFFF), waterIntake),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        });
   }
 }
