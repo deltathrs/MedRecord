@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
@@ -41,7 +42,7 @@ class _DatePickerDropdownState extends State<DatePickerDropdown> {
             child: Text(
               formatter.format(date),
               style: GoogleFonts.lato(
-                  fontSize: 18,
+                  fontSize: 18.sp,
                   fontWeight: FontWeight.w400,
                   color: const Color(0xFF389AFF)),
             ),

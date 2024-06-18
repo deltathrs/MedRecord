@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:med_record/common/widgets/activities_box.dart';
@@ -64,182 +65,185 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(12),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 15,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Hello,',
-                        style: GoogleFonts.leagueSpartan(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16,
-                            color: Color(0xFF67BFFF)),
-                      ),
-                      SizedBox(
-                        height: 2,
-                      ),
-                      Text(
-                        'Ryan Wilson',
-                        style: GoogleFonts.lato(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w900,
-                            color: Color(0xFF5A5A5A)),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 14,
-                      ),
-                      SizedBox(
-                        width: 2,
-                      ),
-                      Icon(Icons.notifications)
-                    ],
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                width: 366,
-                height: 166,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.grey),
-                child: Image.asset('assets/img/dashboard/ad1.png'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                'Daily Activities',
-                style: GoogleFonts.leagueSpartan(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFF5A5A5A)),
-              ),
-              SizedBox(
-                height: 120,
-                child: ListView.builder(
-                    itemCount: activitiesData.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      final activity = activitiesData[index];
-                      return Padding(
-                          padding: EdgeInsets.only(left: 15),
-                          child: ActivitiesBox(
-                            activity['title'],
-                            activity['degree'],
-                            activity['icon'],
-                            activity['element'],
-                          ));
-                    }),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                'MedRecord Features',
-                style: GoogleFonts.leagueSpartan(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFF5A5A5A)),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: Wrap(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(12.w),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        FeaturesIcon(
-                            'Heart Rate', Color(0xFF67BFFF), heartRate),
-                        SizedBox(
-                          width: 12,
+                        Text(
+                          'Hello,',
+                          style: GoogleFonts.leagueSpartan(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16.sp,
+                              color: Color(0xFF67BFFF)),
                         ),
-                        FeaturesIcon(
-                            'Foot Steps', Color(0xFF67BFFF), footSteps),
                         SizedBox(
-                          width: 12,
+                          height: 2.h,
                         ),
-                        FeaturesIcon(
-                            'Family Record', Color(0xFF67BFFF), familyRecord),
-                        SizedBox(
-                          width: 12,
+                        Text(
+                          'Ryan Wilson',
+                          style: GoogleFonts.lato(
+                              fontSize: 20.sp,
+                              fontWeight: FontWeight.w900,
+                              color: Color(0xFF5A5A5A)),
                         ),
-                        FeaturesIcon('Body Temp', Color(0xFF67BFFF), bodyTemp),
-                        SizedBox(
-                          width: 12,
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            _displayBottomSheet(context);
-                          },
-                          child: FeaturesIcon('Others', Colors.white,
-                              '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><g fill="#67BFFF"><path d="M152 128a24 24 0 1 1-24-24a24 24 0 0 1 24 24M48 104a24 24 0 1 0 24 24a24 24 0 0 0-24-24m160 0a24 24 0 1 0 24 24a24 24 0 0 0-24-24" opacity="0.2"/><path d="M128 96a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16M48 96a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16m160-48a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16"/></g></svg>'),
-                        )
                       ],
                     ),
+                    SizedBox(
+                      height: 5.h,
+                    ),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 14.r,
+                        ),
+                        SizedBox(
+                          width: 2.w,
+                        ),
+                        Icon(Icons.notifications)
+                      ],
+                    )
                   ],
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Customized Offers',
-                style: GoogleFonts.leagueSpartan(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFF5A5A5A)),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(22),
-                child: SizedBox(
-                  height: 159,
-                  width: double.infinity,
-                  child: Stack(children: [
-                    Container(
-                      color: Colors.white,
-                    ),
-                    Center(
-                      child: Swiper(
-                        itemCount: slider.length,
-                        itemBuilder: (context, index) {
-                          return Image.asset('${slider[index]}');
-                        },
-                        itemHeight: 159,
-                        itemWidth: 282,
-                        viewportFraction: 0.8,
-                        scale: 0.9,
-                        loop: true,
-                        autoplay: true,
-                      ),
-                    )
-                  ]),
+                SizedBox(
+                  height: 20.h,
                 ),
-              )
-            ],
+                Container(
+                  width: 366.w,
+                  height: 166.h,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30.r),
+                      color: Colors.grey),
+                  child: Image.asset(
+                    'assets/img/dashboard/ad1.png',
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'Daily Activities',
+                  style: GoogleFonts.leagueSpartan(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF5A5A5A)),
+                ),
+                SizedBox(
+                  height: 120.h,
+                  child: ListView.builder(
+                      itemCount: activitiesData.length,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        final activity = activitiesData[index];
+                        return Padding(
+                            padding: EdgeInsets.only(left: 15.w),
+                            child: ActivitiesBox(
+                              activity['title'],
+                              activity['degree'],
+                              activity['icon'],
+                              activity['element'],
+                            ));
+                      }),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'MedRecord Features',
+                  style: GoogleFonts.leagueSpartan(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF5A5A5A)),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(right: 8.0.w),
+                  child: Wrap(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          FeaturesIcon(
+                              'Heart Rate', Color(0xFF67BFFF), heartRate),
+                          SizedBox(
+                            width: 12.w,
+                          ),
+                          FeaturesIcon(
+                              'Foot Steps', Color(0xFF67BFFF), footSteps),
+                          SizedBox(
+                            width: 12.w,
+                          ),
+                          FeaturesIcon(
+                              'Family Record', Color(0xFF67BFFF), familyRecord),
+                          SizedBox(
+                            width: 12.w,
+                          ),
+                          FeaturesIcon(
+                              'Body Temp', Color(0xFF67BFFF), bodyTemp),
+                          SizedBox(
+                            width: 12.w,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              _displayBottomSheet(context);
+                            },
+                            child: FeaturesIcon('Others', Colors.white,
+                                '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><g fill="#67BFFF"><path d="M152 128a24 24 0 1 1-24-24a24 24 0 0 1 24 24M48 104a24 24 0 1 0 24 24a24 24 0 0 0-24-24m160 0a24 24 0 1 0 24 24a24 24 0 0 0-24-24" opacity="0.2"/><path d="M128 96a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16M48 96a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16m160-48a32 32 0 1 0 32 32a32 32 0 0 0-32-32m0 48a16 16 0 1 1 16-16a16 16 0 0 1-16 16"/></g></svg>'),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Text(
+                  'Customized Offers',
+                  style: GoogleFonts.leagueSpartan(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF5A5A5A)),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(22.r),
+                  child: SizedBox(
+                    height: 159.h,
+                    width: double.infinity,
+                    child: Stack(children: [
+                      Container(
+                        color: Colors.white,
+                      ),
+                      Center(
+                        child: Swiper(
+                          itemCount: slider.length,
+                          itemBuilder: (context, index) {
+                            return Image.asset('${slider[index]}');
+                          },
+                          itemHeight: 159.h,
+                          itemWidth: 282.w,
+                          viewportFraction: 0.8,
+                          scale: 0.9,
+                          loop: true,
+                          autoplay: true,
+                        ),
+                      )
+                    ]),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -251,46 +255,46 @@ class _DashboardScreenState extends State<DashboardScreen> {
         context: context,
         builder: (context) {
           return ClipRRect(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(30.r)),
             child: Stack(
               children: [
                 Container(
-                  height: 350,
+                  height: 350.h,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(30)),
+                        BorderRadius.vertical(top: Radius.circular(30.r)),
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsets.only(top: 12, left: 15, right: 15),
+                        EdgeInsets.only(top: 12.h, left: 15.w, right: 15.w),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Center(
                             child: Container(
-                          width: 75,
-                          height: 5,
+                          width: 75.w,
+                          height: 5.h,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(12.r),
                               color: Color(0xFF5A5A5A)),
                         )),
                         SizedBox(
-                          height: 10,
+                          height: 10.h,
                         ),
                         Center(
                           child: Text(
                             'MedRecord Features',
                             style: GoogleFonts.leagueSpartan(
-                                fontSize: 20,
+                                fontSize: 20.sp,
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xFF5A5A5A)),
                           ),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -298,29 +302,29 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             FeaturesIcon(
                                 'Heart Rate', Color(0xFF67BFFF), heartRate),
                             SizedBox(
-                              width: 12,
+                              width: 12.w,
                             ),
                             FeaturesIcon(
                                 'Foot Steps', Color(0xFF67BFFF), footSteps),
                             SizedBox(
-                              width: 12,
+                              width: 12.w,
                             ),
                             FeaturesIcon('Family Record', Color(0xFF67BFFF),
                                 familyRecord),
                             SizedBox(
-                              width: 12,
+                              width: 12.w,
                             ),
                             FeaturesIcon(
                                 'Body Temp', Color(0xFF67BFFF), bodyTemp),
                             SizedBox(
-                              width: 12,
+                              width: 12.w,
                             ),
                             FeaturesIcon('Sleep Overview', Color(0xFF67BFFF),
                                 sleepOverview),
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 10.h,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,

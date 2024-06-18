@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:med_record/features/record/presentation/screens/date_picker.dart';
@@ -32,7 +33,7 @@ class _RecordScreenState extends State<RecordScreen> {
         body: SingleChildScrollView(
       child: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: EdgeInsets.all(12.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,7 +44,7 @@ class _RecordScreenState extends State<RecordScreen> {
                   Text(
                     'Your Summary',
                     style: GoogleFonts.leagueSpartan(
-                        fontSize: 32,
+                        fontSize: 32.sp,
                         fontWeight: FontWeight.w600,
                         color: Color(0xFF5A5A5A)),
                   ),
@@ -54,34 +55,34 @@ class _RecordScreenState extends State<RecordScreen> {
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Icon(
                     Icons.calendar_today,
-                    size: 24,
+                    size: 24.w,
                     color: Colors.blue,
                   ),
                   SizedBox(
-                    width: 7,
+                    width: 7.w,
                   ),
                   DatePickerDropdown(),
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               Text(
                 'Activities',
                 style: GoogleFonts.leagueSpartan(
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.w600,
                     color: Color(0xFF5A5A5A)),
               ),
               SizedBox(
-                height: 5,
+                height: 5.h,
               ),
               ActivitiesBox(
                 sleepOverview,
@@ -92,7 +93,7 @@ class _RecordScreenState extends State<RecordScreen> {
                 Color(0xFF389AFF),
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               ActivitiesBox(
                 bodyTemperature,
@@ -103,7 +104,7 @@ class _RecordScreenState extends State<RecordScreen> {
                 Colors.red,
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               ActivitiesBox(
                 heartRate,
@@ -114,7 +115,7 @@ class _RecordScreenState extends State<RecordScreen> {
                 Color(0xFF389AFF),
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               ActivitiesBox(
                 waterIntake,
@@ -125,7 +126,7 @@ class _RecordScreenState extends State<RecordScreen> {
                 Colors.red,
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               ActivitiesBox(
                 footSteps,
@@ -136,43 +137,42 @@ class _RecordScreenState extends State<RecordScreen> {
                 Color(0xFF389AFF),
               ),
               SizedBox(
-                height: 20,
+                height: 20.h,
               ),
               Text(
                 'Summary',
                 style: GoogleFonts.leagueSpartan(
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.w600,
                     color: Color(0xFF5A5A5A)),
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               Center(
                 child: Container(
-                  width: 360,
-                  height: 119,
+                  width: 360.w,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(color: Colors.transparent),
-                    borderRadius: BorderRadius.circular(22),
+                    borderRadius: BorderRadius.circular(22.r),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.9),
-                        spreadRadius: 1,
-                        blurRadius: 5,
+                        spreadRadius: 1.r,
+                        blurRadius: 5.r,
                         offset: Offset(0, 3),
                       ),
                     ],
                   ),
                   child: SingleChildScrollView(
-                    padding: EdgeInsets.all(8),
+                    padding: EdgeInsets.all(8.w),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Text(
                       'Hi Rifaldi, your sleep needs today are good, your heart rate is normal, your body movements are good. However, your body temperature is far above normal, get checked immediately! And don'
                       't forget to fulfill your water needs more today. ',
                       style: GoogleFonts.leagueSpartan(
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
                           color: Color(0xFF5A5A5A)),
                     ),
@@ -191,24 +191,24 @@ class _RecordScreenState extends State<RecordScreen> {
     return Stack(
       children: [
         Container(
-          width: 385,
-          height: 73,
+          width: 410.w,
+          height: 73.h,
           decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(color: Colors.transparent),
-            borderRadius: BorderRadius.circular(22),
+            borderRadius: BorderRadius.circular(22.r),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withOpacity(0.9),
-                spreadRadius: 1,
-                blurRadius: 5,
+                spreadRadius: 1.r,
+                blurRadius: 5.r,
                 offset: Offset(0, 3),
               ),
             ],
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: EdgeInsets.all(12.0.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -216,12 +216,12 @@ class _RecordScreenState extends State<RecordScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   CircleAvatar(
-                    radius: 20,
+                    radius: 20.r,
                     backgroundColor: background,
                     child: Iconify(icon),
                   ),
                   SizedBox(
-                    width: 8,
+                    width: 8.w,
                   ),
                   Expanded(
                     // Add Expanded widget here
@@ -232,15 +232,15 @@ class _RecordScreenState extends State<RecordScreen> {
                         Text(
                           title,
                           style: GoogleFonts.lato(
-                              fontSize: 16, fontWeight: FontWeight.w400),
+                              fontSize: 16.sp, fontWeight: FontWeight.w400),
                         ),
                         SizedBox(
-                          height: 2,
+                          height: 2.h,
                         ),
                         Text(
                           subtitle,
                           style: GoogleFonts.montserrat(
-                              fontSize: 14,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w500,
                               color: Color(0xFF8189B0)),
                         ),
@@ -248,23 +248,23 @@ class _RecordScreenState extends State<RecordScreen> {
                     ),
                   ),
                   SizedBox(
-                      width: 10), // Space between text and status indicator
+                      width: 10.w), // Space between text and status indicator
                   Container(
-                    height: 23,
+                    height: 23.h,
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 8),
+                          padding: EdgeInsets.symmetric(horizontal: 8.w),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(20.r),
                             color: status_color,
                           ),
                           child: Center(
                             child: Text(
                               status,
                               style: GoogleFonts.mulish(
-                                fontSize: 12,
+                                fontSize: 12.sp,
                                 fontWeight: FontWeight.w800,
                                 color: Colors.white,
                               ),
