@@ -5,6 +5,7 @@ import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:med_record/common/widgets/activities_box.dart';
 import 'package:med_record/common/widgets/feature_box.dart';
 import 'package:flutter_swiper_view/flutter_swiper_view.dart';
+import 'package:med_record/features/family_record/presentation/screens/family_record.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -184,8 +185,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           SizedBox(
                             width: 12.w,
                           ),
-                          FeaturesIcon(
-                              'Family Record', Color(0xFF67BFFF), familyRecord),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => FamilyRecord()));
+                            },
+                            child: FeaturesIcon('Family Record',
+                                Color(0xFF67BFFF), familyRecord),
+                          ),
                           SizedBox(
                             width: 12.w,
                           ),
